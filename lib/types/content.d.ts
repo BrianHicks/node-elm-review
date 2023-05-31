@@ -23,6 +23,11 @@ export type ElmJsonData = {
   project: unknown;
 };
 
+export type ArbitraryFile = {
+  path: Path;
+  content: string;
+};
+
 export type Dependencies = Dependency[];
 
 export type Dependency = unknown;
