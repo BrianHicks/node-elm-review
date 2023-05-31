@@ -299,7 +299,7 @@ I recommend you take a look at the following documents:
                     [ cmd
 
                     -- TODO Don't trigger when the other cmd is `abort`
-                    , rules |> List.concatMap Rule.ruleRequestedFiles |> Set.fromList |> Set.toList |> requestReadingFiles
+                    , rules |> List.concatMap Rule.ruleRequestedFiles |> Set.fromList |> Set.toList |> Debug.log "requestedFiles" |> requestReadingFiles
                     ]
 
             configurationErrors ->
