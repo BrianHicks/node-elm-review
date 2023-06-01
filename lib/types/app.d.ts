@@ -9,6 +9,7 @@ import type {
   LinksToRuleDocs
 } from './types/content';
 import type {SuppressedErrorsFile} from './types/suppressed';
+import {ArbitraryFile} from './content';
 
 export type App = {
   ports: Ports;
@@ -24,6 +25,7 @@ export type Ports = {
   collectSuppressedErrors: SendPort<SuppressedErrorsFile[]>;
   updateSuppressedErrors: SendPort<SuppressedErrorsFile[]>;
   collectLinks: SendPort<LinksToRuleDocs>;
+  collectArbitraryFiles: SendPort<ArbitraryFile[]>;
   userConfirmedFix: SendPort<FixConfirmation>;
 
   acknowledgeFileReceipt: SubscribePort<FileReceipt>;
